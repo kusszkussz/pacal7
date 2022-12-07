@@ -10,6 +10,26 @@ body{
     font-size: 1.4em;
 }
 
+ul{
+    list-style-type: none;
+    background-color: rgba(230, 230, 230, 0.5);
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+    border-radius: 5px;
+}
+
+li{
+    float: left;
+}
+
+li a {
+    display: block;
+    text-decoration: none;
+    padding: 15px;
+    color: white;
+}
+
 #header{
     grid-area: header;
     background-image: url(/img/dandelion.jpg);
@@ -56,4 +76,17 @@ body{
 #wrapper > div:hover{
     opacity: 1;
     transition: opacity 1s ease;
+}
+
+@media all and (max-width: 600px) {
+    #wrapper{
+        grid-template-columns: 1fr
+        grid-template-areas:
+        "header"
+        "nav" 
+        "nav"
+        "aside" 
+        "footer" 
+        "article";
+    }
 }
